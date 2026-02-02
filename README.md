@@ -10,8 +10,8 @@ This README contains a Phase 1 functionality checklist, everything needed for Le
 
 ### 1. Data Ingestion System
 
-- [ ] Upload legal cases (PDF / text)
-- [ ] Extract text from documents
+- [x] Upload legal cases (PDF / text)
+- [x] Extract text from documents
 - [ ] Clean text (remove headers, footers, page numbers)
 - [ ] Chunk text into smaller segments for AI processing
 - [ ] Add metadata (case title, year, court, topics, case_id)
