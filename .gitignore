@@ -1,3 +1,67 @@
-data/private
-structure.txt
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+
+# Virtual environments
 venv/
+.env/
+.venv/
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs & runtime files
+# =========================
+*.log
+*.sqlite3
+
+# =========================
+# Project-specific
+# =========================
+
+# Private / sensitive data
+data/private/
+
+# Sample structure / scratch files
+structure.txt
+
+# LangChain / ingestion artifacts
+*.pdf
+*.json
+*.pickle
+*.pkl
+*.faiss
+*.index
+
+# =========================
+# Testing & coverage
+# =========================
+.pytest_cache/
+.coverage
+htmlcov/
+
+# =========================
+# Build / packaging
+# =========================
+build/
+dist/
