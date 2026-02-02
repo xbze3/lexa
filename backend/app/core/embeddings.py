@@ -41,12 +41,25 @@ def embed(documents: List[Document]):
 
     num_batches = (len(texts) + BATCH_SIZE - 1) // BATCH_SIZE
 
-    for b, i in enumerate(range(0, len(texts), BATCH_SIZE), start=1):
+    for b, i in enumerate(
+        tqdm(
+            range(0, len(texts), BATCH_SIZE),
+            desc="Embedding batches",
+            total=num_batches,
+            unit="batch",
+        ),
+        start=1,
+    ):
         batch = texts[i : i + BATCH_SIZE]
-        print(f"\n  Batch {b}/{num_batches} ({len(batch)} chunks)")
 
-        for idx, t in enumerate(batch, start=1):
-            print(f"  ↳ embedding chunk {idx}/{len(batch)}")
-            vectors.append(_embed_one(t))
+        with tqdm(
+            total=len(batch),
+            desc=f"Batch {b}/{num_batches}",
+            unit="chunk",
+            leave=False,
+        ) as inner:
+            for t in batch:
+                vectors.append(_embed_one(t))
+                inner.update(1)
 
     return vectors
