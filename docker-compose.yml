@@ -1,0 +1,22 @@
+services:
+    ollama:
+        image: ollama/ollama:latest
+        container_name: lexa-ollama
+        ports:
+            - "11434:11434"
+        volumes:
+            - ollama:/root/.ollama
+        restart: unless-stopped
+
+    chroma:
+        image: chromadb/chroma:latest
+        container_name: lexa-chroma
+        ports:
+            - "8000:8000"
+        volumes:
+            - chroma:/chroma/chroma
+        restart: unless-stopped
+
+volumes:
+    ollama:
+    chroma:
