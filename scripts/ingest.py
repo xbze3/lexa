@@ -7,12 +7,12 @@ from backend.app.core.chroma_store import store
 
 def ingest():
     pdf_documents = parse_pdfs()
-    merged_docments = merge_pages_by_source(pdf_documents)
-    chunks = chunker(merged_docments)
+    merged_documents = merge_pages_by_source(pdf_documents)
+    chunks = chunker(merged_documents)
     embeddings = embed(chunks)
-    store = store(embeddings)
+    stored = store(documents=chunks, embeddings=embeddings)
 
-    print(f"Vectors stored successfully: {store} chunks stored")
+    print(f"Vectors stored successfully: {stored} chunks stored")
 
 
 if __name__ == "__main__":

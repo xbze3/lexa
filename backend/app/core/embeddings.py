@@ -35,13 +35,18 @@ def _embed_one(text: str) -> List[float]:
     raise RuntimeError(f"Embedding failed after {MAX_RETRIES} retries: {last_err}")
 
 
-def embed(documents: List[Document]) -> List[list]:
+def embed(documents: List[Document]):
     texts = [doc.page_content for doc in documents]
     vectors: List[list] = []
 
-    for i in tqdm(range(0, len(texts), BATCH_SIZE), desc="Embedding", unit="chunk"):
+    num_batches = (len(texts) + BATCH_SIZE - 1) // BATCH_SIZE
+
+    for b, i in enumerate(range(0, len(texts), BATCH_SIZE), start=1):
         batch = texts[i : i + BATCH_SIZE]
-        for t in batch:
+        print(f"\n  Batch {b}/{num_batches} ({len(batch)} chunks)")
+
+        for idx, t in enumerate(batch, start=1):
+            print(f"  ↳ embedding chunk {idx}/{len(batch)}")
             vectors.append(_embed_one(t))
 
     return vectors
