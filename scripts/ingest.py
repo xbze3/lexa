@@ -6,4 +6,5 @@ def ingest():
     print(pdf_documents)
 
 
-ingest()
+if __name__ == "__main__":
+    ingest()
