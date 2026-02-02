@@ -12,9 +12,9 @@ This README contains a Phase 1 functionality checklist, everything needed for Le
 
 - [x] Upload legal cases (PDF / text)
 - [x] Extract text from documents
-- [ ] Clean text (remove headers, footers, page numbers)
-- [ ] Chunk text into smaller segments for AI processing
-- [ ] Add metadata (case title, year, court, topics, case_id)
+- [x] Clean text (remove headers, footers, page numbers)
+- [x] Chunk text into smaller segments for AI processing
+- [x] Add metadata (case title, year, court, topics, case_id)
 
 Turns raw legal documents into structured knowledge Lexa can understand.
 
@@ -22,9 +22,9 @@ Turns raw legal documents into structured knowledge Lexa can understand.
 
 ### 2. Embeddings & Vector Storage
 
-- [ ] Generate embeddings for each text chunk
-- [ ] Store embeddings + metadata in MongoDB Vector Search
-- [ ] Test retrieval by similarity search
+- [x] Generate embeddings for each text chunk
+- [x] Store embeddings + metadata in MongoDB Vector Search
+- [x] Test retrieval by similarity search
 
 Creates a semantic map of all legal knowledge for retrieval.
 
