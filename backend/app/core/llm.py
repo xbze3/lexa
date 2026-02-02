@@ -4,7 +4,7 @@ import requests
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 ANSWER_MODEL = os.getenv("OLLAMA_ANSWER_MODEL", "mistral")
 
-TIMEOUT_SECONDS = 600
+TIMEOUT_SECONDS = 60
 
 
 def generate_answer(prompt: str) -> str:

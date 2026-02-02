@@ -60,7 +60,7 @@ def retrieve(
     res = collection.query(
         query_embeddings=[q_emb],
         n_results=k,
-        include=["documents", "metadatas", "distances", "ids"],
+        include=["documents", "metadatas", "distances"],
     )
 
     docs = (res.get("documents") or [[]])[0]
