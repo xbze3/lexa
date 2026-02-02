@@ -1,9 +1,10 @@
 from backend.app.utils.pdf_parser import parse_pdfs
+from backend.app.core.chunking import chunker
 
 
 def ingest():
     pdf_documents = parse_pdfs()
-    print(pdf_documents)
+    chunks = chunker(pdf_documents)
 
 
 if __name__ == "__main__":
