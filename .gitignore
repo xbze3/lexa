@@ -67,3 +67,4 @@ build/
 dist/
 
 remove_chroma_collection.py
+confirm_chroma_vector_size.py

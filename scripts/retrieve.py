@@ -24,7 +24,7 @@ if __name__ == "__main__":
         if q == "q":
             break
 
-        result = backend_retrieve(q, k=5)
+        result = retrieve(q, k=1)
 
         print("\n--- ANSWER ---\n")
         print(result["answer"])
