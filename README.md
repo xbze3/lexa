@@ -164,6 +164,29 @@ The `requirements.txt` file defines all core libraries required to run Lexa, inc
 - Vector database and embedding dependencies
 - RAG pipeline utilities
 
+### Sample Legal Documents
+
+For demonstration and testing purposes, Lexa includes 5 sample legal case files located in the /data/sample directory.
+
+These files are used to:
+- validate the ingestion and preprocessing pipeline
+- test chunking and embedding behavior
+- evaluate retrieval accuracy and citation grounding
+- provide a minimal working dataset for local experimentation
+
+Directory structure:
+
+```
+data/
+  sample/
+    case_1.pdf
+    case_2.pdf
+    case_3.pdf
+    case_4.pdf
+    case_5.pdf
+```
+You can replace or expand this folder with your own legal documents to build a larger corpus.
+> Note: The sample files are included solely for development and testing purposes and do not represent a comprehensive legal dataset.
 ---
 
 ## Development Status
