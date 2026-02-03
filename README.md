@@ -168,13 +168,13 @@ The `requirements.txt` file defines all core libraries required to run Lexa, inc
 
 ## Development Status
 
-✅ Core RAG pipeline implemented
-✅ Ingestion, cleaning, and chunking pipeline working
-✅ Embedding and retrieval validated
-✅ Chroma schema and dimension handling stabilized
-⏸️ API layer planned
-⏸️ Frontend planned
-⏸️ Scaling deferred pending hardware upgrade
+✅ Core RAG pipeline implemented\
+✅ Ingestion, cleaning, and chunking pipeline working\
+✅ Embedding and retrieval validated\
+✅ Chroma schema and dimension handling stabilized\
+⏸️ API layer planned\
+⏸️ Frontend planned\
+⏸️ Scaling deferred pending hardware upgrade\
 
 ---
 
