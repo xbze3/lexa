@@ -199,7 +199,7 @@ MIT License
 
 ## Author
 
-Built by **Ezra Minty**
+Built by **Ezra Minty**\
 Early-stage legal tech research and experimentation project.
 
 ---
